@@ -5,6 +5,10 @@
 // X0-X2 - parameters to Unix system calls
 // X16 - Mach System Call function number
 //
+// assemble with the associated make file or:
+//    as -arch arm64 -o HelloWorld.o HelloWorld.s
+// link with associated makefile or:
+//    ld -o HelloWorld HelloWorld.o -lSystem -syslibroot `xcrun -sdk macosx --show-sdk-path` -e _start -arch arm64
 
 .global _start			// Provide program starting address to linker
 .align 2			// Make sure everything is aligned properly
