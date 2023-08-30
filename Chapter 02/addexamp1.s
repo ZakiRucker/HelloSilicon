@@ -5,7 +5,8 @@
 .align 2
 
 // Multiply 2 by -1 by using MOVN and then adding 1
-_start:	MOVN	W0, #2
+_start:	
+    MOVN	W0, #2
 	ADD	W0, W0, #1
 
 // Setup the parameters to exit the program
